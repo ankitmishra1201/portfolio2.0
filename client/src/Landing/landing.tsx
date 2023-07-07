@@ -1,3 +1,4 @@
+import { required } from "nodemon/lib/config";
 import React from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
@@ -29,8 +30,10 @@ export const Landing = () => {
   };
 
   const foreground: BannerLayer = {
-    image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner-foreground.png",
+    image:require("../assets/banner-foreground.png"),
+
+
+
     translateY: [0, 15],
     scale: [1, 1.1, "easeOutCubic"],
     shouldAlwaysCompleteAnimation: true
