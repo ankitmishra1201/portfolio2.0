@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Landing } from './Landing/landing.tsx';
+import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <ParallaxProvider>
+        <Landing />
+        <div className="center full">
+        <p className='spacing'>
+          <h3 className='gray content'>Something is Cooking up !!</h3>
+          <br></br>
+          <h1 className='gray headline'>Coming Soon</h1>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+
+      </ParallaxProvider>
     </div>
   );
 }
